@@ -1,6 +1,6 @@
 import { getAuthHeaders, getToken } from './auth';
 
-const BASE_URL = '/api';
+const BASE_URL = 'https://rvrjc-colorido-demo-backend-1.onrender.com/api';
 
 async function handleResponse(response) {
   if (!response.ok) {
