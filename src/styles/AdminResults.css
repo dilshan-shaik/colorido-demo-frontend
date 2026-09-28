@@ -1,0 +1,760 @@
+/* =========================================================
+   COLORIDO 2K26 — ADMIN RESULTS
+   Festival / College Theme
+   ========================================================= */
+
+.admin-results-page {
+    padding: 32px;
+    min-height: 100vh;
+    color: var(--text-primary, #171717);
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255, 193, 7, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(236, 72, 153, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(124, 58, 237, 0.08),
+            transparent 35%
+        ),
+        var(--page-bg, #fafafa);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.admin-page-header {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 28px 30px;
+    border-radius: 24px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124, 58, 237, 0.95),
+            rgba(236, 72, 153, 0.92)
+        );
+
+    color: white;
+
+    box-shadow:
+        0 15px 40px rgba(124, 58, 237, 0.20);
+}
+
+.admin-page-header::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    right: -50px;
+    top: -80px;
+    background: rgba(255, 193, 7, 0.35);
+}
+
+.admin-page-header::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    right: 100px;
+    bottom: -70px;
+    background: rgba(34, 211, 238, 0.25);
+}
+
+.admin-page-header h1 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 900;
+    letter-spacing: -0.8px;
+}
+
+.admin-page-header p {
+    position: relative;
+    z-index: 2;
+
+    margin: 9px 0 0;
+
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   RESULT FORM
+   ========================================================= */
+
+.result-form-card {
+    max-width: 950px;
+
+    padding: 28px;
+    margin-bottom: 32px;
+
+    border-radius: 22px;
+
+    background: var(--card-bg, #ffffff);
+
+    border: 1px solid
+        var(--border-color, rgba(0, 0, 0, 0.06));
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.07);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.result-form-card::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #7c3aed,
+            #ec4899,
+            #f59e0b
+        );
+}
+
+.result-form-card h2 {
+    margin: 0 0 24px;
+
+    font-size: 23px;
+    font-weight: 800;
+
+    color: var(--text-primary, #171717);
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    color: var(--text-primary, #222);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.results-toolbar select {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 15px;
+
+    border: 1px solid
+        var(--input-border, #dedede);
+
+    border-radius: 12px;
+
+    background: var(--input-bg, #ffffff);
+
+    color: var(--text-primary, #171717);
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: #b9a1f5;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #7c3aed;
+
+    box-shadow:
+        0 0 0 4px rgba(124, 58, 237, 0.10);
+}
+
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+.form-checkbox {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 20px 0;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-checkbox input {
+    width: 18px;
+    height: 18px;
+
+    accent-color: #7c3aed;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.form-actions {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 24px;
+}
+
+.form-actions button,
+.result-actions button {
+
+    border: none;
+
+    border-radius: 11px;
+
+    padding: 11px 18px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.form-actions button:hover,
+.result-actions button:hover {
+
+    transform: translateY(-2px);
+}
+
+
+/* PRIMARY */
+
+.form-actions button[type="submit"] {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #ec4899
+        );
+
+    box-shadow:
+        0 7px 20px rgba(124, 58, 237, 0.25);
+}
+
+.form-actions button[type="submit"]:hover {
+
+    box-shadow:
+        0 10px 25px rgba(124, 58, 237, 0.35);
+}
+
+
+/* CANCEL */
+
+.form-actions button[type="button"] {
+
+    background:
+        var(--secondary-button-bg, #f1f1f1);
+
+    color:
+        var(--text-primary, #333);
+}
+
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.results-toolbar {
+
+    max-width: 950px;
+
+    margin-bottom: 22px;
+
+    padding: 18px 20px;
+
+    border-radius: 16px;
+
+    background:
+        var(--card-bg, #ffffff);
+
+    border:
+        1px solid
+        var(--border-color, rgba(0, 0, 0, 0.06));
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.results-toolbar select {
+
+    max-width: 350px;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   RESULTS LIST
+   ========================================================= */
+
+.results-list {
+
+    display: grid;
+
+    gap: 18px;
+
+    max-width: 1100px;
+}
+
+
+/* =========================================================
+   RESULT CARD
+   ========================================================= */
+
+.result-admin-card {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 23px 24px;
+
+    border-radius: 20px;
+
+    background:
+        var(--card-bg, #ffffff);
+
+    border:
+        1px solid
+        var(--border-color, rgba(0, 0, 0, 0.06));
+
+    box-shadow:
+        0 6px 25px rgba(0, 0, 0, 0.06);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.result-admin-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f59e0b,
+            #ec4899,
+            #7c3aed
+        );
+}
+
+.result-admin-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   RESULT CONTENT
+   ========================================================= */
+
+.result-admin-card h3 {
+
+    margin: 0 0 8px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color:
+        #7c3aed;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+.result-admin-card h4 {
+
+    margin: 0 0 10px;
+
+    font-size: 22px;
+
+    font-weight: 850;
+
+    color:
+        var(--text-primary, #171717);
+}
+
+.result-admin-card p {
+
+    margin: 6px 0;
+
+    font-size: 14px;
+
+    color:
+        var(--text-secondary, #666);
+}
+
+
+/* =========================================================
+   RESULT ACTIONS
+   ========================================================= */
+
+.result-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 9px;
+
+    flex-wrap: wrap;
+}
+
+.result-actions button {
+
+    background:
+        var(--secondary-button-bg, #f3f4f6);
+
+    color:
+        var(--text-primary, #333);
+}
+
+.result-actions button:hover {
+
+    background:
+        #ede9fe;
+
+    color:
+        #6d28d9;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 6px 11px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+.status::before {
+
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.empty-results {
+
+    padding: 65px 30px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    background:
+        var(--card-bg, #ffffff);
+
+    border:
+        1px dashed
+        var(--border-color, #d5d5d5);
+
+    color:
+        var(--text-secondary, #777);
+}
+
+.empty-results h3 {
+
+    margin-bottom: 8px;
+
+    font-size: 20px;
+
+    color:
+        var(--text-primary, #222);
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+[data-theme="dark"] .admin-results-page {
+
+    color: #f5f5f5;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(124, 58, 237, 0.15),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(236, 72, 153, 0.12),
+            transparent 30%
+        ),
+        #0b0b12;
+}
+
+[data-theme="dark"] .result-form-card,
+[data-theme="dark"] .result-admin-card,
+[data-theme="dark"] .results-toolbar,
+[data-theme="dark"] .empty-results {
+
+    background: #14141f;
+
+    border-color:
+        rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.30);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea,
+[data-theme="dark"] .results-toolbar select {
+
+    background: #1b1b28;
+
+    color: #f5f5f5;
+
+    border-color:
+        rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .form-group input:focus,
+[data-theme="dark"] .form-group select:focus,
+[data-theme="dark"] .form-group textarea:focus {
+
+    border-color: #a78bfa;
+
+    box-shadow:
+        0 0 0 4px rgba(167, 139, 250, 0.12);
+}
+
+[data-theme="dark"] .result-admin-card p {
+
+    color: #a1a1aa;
+}
+
+[data-theme="dark"] .result-actions button {
+
+    background: #242433;
+
+    color: #e5e7eb;
+}
+
+[data-theme="dark"] .result-actions button:hover {
+
+    background: #312e49;
+
+    color: #c4b5fd;
+}
+
+[data-theme="dark"] .form-actions button[type="button"] {
+
+    background: #292936;
+
+    color: #e5e7eb;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .admin-results-page {
+        padding: 24px;
+    }
+
+    .result-admin-card {
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .result-actions {
+
+        justify-content: flex-start;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .admin-results-page {
+
+        padding: 15px;
+    }
+
+    .admin-page-header {
+
+        padding: 23px 20px;
+
+        border-radius: 19px;
+    }
+
+    .admin-page-header h1 {
+
+        font-size: 27px;
+    }
+
+    .result-form-card {
+
+        padding: 21px 18px;
+
+        border-radius: 18px;
+    }
+
+    .result-admin-card {
+
+        padding: 20px 18px;
+
+        border-radius: 17px;
+    }
+
+    .result-admin-card h4 {
+
+        font-size: 19px;
+    }
+
+    .form-actions {
+
+        flex-direction: column;
+    }
+
+    .form-actions button {
+
+        width: 100%;
+    }
+
+    .result-actions {
+
+        width: 100%;
+    }
+
+    .result-actions button {
+
+        flex: 1;
+    }
+
+    .results-toolbar select {
+
+        max-width: 100%;
+    }
+}
