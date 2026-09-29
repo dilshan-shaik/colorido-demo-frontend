@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   Calendar,
   MapPin,
   Trophy,
   Image as ImageIcon,
-  Sparkles
+  Sparkles,
+  Link
 } from 'lucide-react';
 
 import coloridoLogo from '../assets/colorido-logo.png';
@@ -73,21 +75,21 @@ export default function HomePage({
 
               <div className="flex flex-wrap gap-4">
 
-                <a
-                  href="/events"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600 text-white font-bold text-sm shadow-lg shadow-purple-900/30 hover:scale-105 transition-transform"
-                >
+                <Link
+  to="/events"
+  className="inline-flex items-center gap-2 text-sm font-bold text-purple-400 hover:text-purple-300"
+>
                   Explore Events
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href="/schedule"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-purple-500/30 bg-white/5 text-gray-200 font-bold text-sm hover:bg-white/10 transition-colors"
                 >
                   <Calendar className="w-4 h-4" />
                   View Schedule
-                </a>
+                </Link>
 
               </div>
 
