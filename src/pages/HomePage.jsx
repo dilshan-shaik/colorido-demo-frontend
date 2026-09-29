@@ -149,15 +149,17 @@ export default function HomePage({
               <div className="flex flex-wrap gap-4">
 
                 <Link
-                  to="/events"
-                  className="inline-flex items-center gap-2 text-sm font-bold text-purple-400 hover:text-purple-300"
-                >
+  to="/events"
+  className="group relative inline-flex items-center gap-3 overflow-hidden rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 px-6 py-3.5 text-sm font-black text-white shadow-lg shadow-purple-900/30 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-xl hover:shadow-pink-900/30"
+>
+  <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
 
-                  Explore Events
+  <span className="relative z-10">
+    Explore Events
+  </span>
 
-                  <ArrowRight className="w-4 h-4" />
-
-                </Link>
+  <ArrowRight className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+</Link>
 
                 <Link
                   to="/schedule"
