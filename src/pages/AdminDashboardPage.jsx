@@ -1369,16 +1369,7 @@ export default function AdminDashboardPage({ onDataChanged }) {
           <div className="pt-6 mt-6 border-t border-white/5 text-[11px] text-gray-400 space-y-1">
 
             <p className="font-bold text-gray-300">
-              Live Database Sync:
-            </p>
-
-            <p>
-              MySQL / MariaDB on 3306
-            </p>
-
-            <p className="text-pink-400">
-              COLORIDO AI Context Live
-            </p>
+             </p>
 
           </div>
 

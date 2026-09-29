@@ -1,6 +1,7 @@
 import { getAuthHeaders } from './auth';
 
-const BASE_URL = '/api';
+const BASE_URL =
+    'https://rvrjc-colorido-demo-backend-1.onrender.com/api';
 
 async function handleResponse(response) {
     if (!response.ok) {
@@ -39,9 +40,11 @@ const resultService = {
     // ==========================================
 
     getAllResults: async () => {
-
         const response = await fetch(
-            `${BASE_URL}/results`
+            `${BASE_URL}/results`,
+            {
+                headers: getAuthHeaders()
+            }
         );
 
         return handleResponse(response);
@@ -53,7 +56,6 @@ const resultService = {
     // ==========================================
 
     getPublishedResults: async () => {
-
         const response = await fetch(
             `${BASE_URL}/results/published`
         );
@@ -67,7 +69,6 @@ const resultService = {
     // ==========================================
 
     getResultsByEvent: async (eventId) => {
-
         const response = await fetch(
             `${BASE_URL}/results/event/${eventId}`,
             {
@@ -84,7 +85,6 @@ const resultService = {
     // ==========================================
 
     getPublishedResultsByEvent: async (eventId) => {
-
         const response = await fetch(
             `${BASE_URL}/results/event/${eventId}/published`
         );
@@ -98,7 +98,6 @@ const resultService = {
     // ==========================================
 
     createResult: async (eventId, result) => {
-
         const response = await fetch(
             `${BASE_URL}/results/event/${eventId}`,
             {
@@ -116,12 +115,7 @@ const resultService = {
     // UPDATE RESULT - ADMIN
     // ==========================================
 
-    updateResult: async (
-        id,
-        eventId,
-        result
-    ) => {
-
+    updateResult: async (id, eventId, result) => {
         const response = await fetch(
             `${BASE_URL}/results/${id}/event/${eventId}`,
             {
@@ -140,7 +134,6 @@ const resultService = {
     // ==========================================
 
     deleteResult: async (id) => {
-
         const response = await fetch(
             `${BASE_URL}/results/${id}`,
             {
@@ -158,7 +151,6 @@ const resultService = {
     // ==========================================
 
     togglePublish: async (id) => {
-
         const response = await fetch(
             `${BASE_URL}/results/${id}/toggle-publish`,
             {
