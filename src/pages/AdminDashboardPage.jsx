@@ -1283,12 +1283,12 @@ export default function AdminDashboardPage({ onDataChanged }) {
               count: venues.length
             },
 
-            {
-              id: 'map',
-              label: 'Map & Food Stalls',
-              icon: Utensils,
-              count: mapLocations.length
-            },
+            // {
+            //   id: 'map',
+            //   label: 'Map & Food Stalls',
+            //   icon: Utensils,
+            //   count: mapLocations.length
+            // },
 
             {
               id: 'gallery',
@@ -1463,7 +1463,7 @@ export default function AdminDashboardPage({ onDataChanged }) {
                 </div>
 
 
-                <div className="p-5 rounded-2xl bg-[#0f1326] border border-purple-900/40">
+                {/* <div className="p-5 rounded-2xl bg-[#0f1326] border border-purple-900/40">
 
                   <span className="text-xs text-gray-400 font-bold uppercase tracking-wider">
                     Map Markers
@@ -1477,7 +1477,7 @@ export default function AdminDashboardPage({ onDataChanged }) {
                     Including Food Stall Area
                   </p>
 
-                </div>
+                </div> */}
 
               </div>
 
@@ -1535,7 +1535,7 @@ export default function AdminDashboardPage({ onDataChanged }) {
                     </button>
 
 
-                    <button
+                    {/* <button
                       onClick={() =>
                         openModal('create_map')
                       }
@@ -1548,7 +1548,7 @@ export default function AdminDashboardPage({ onDataChanged }) {
                         Add Map Marker
                       </span>
 
-                    </button>
+                    </button> */}
 
 
                     <button
